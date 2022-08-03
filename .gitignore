@@ -2,3 +2,4 @@ venv/
 pdf/
 database.*
 secret_key.py
+.history/

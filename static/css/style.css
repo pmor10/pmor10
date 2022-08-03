@@ -6,11 +6,11 @@
   --header-height: 3rem;
 
   /*==============Colors==============*/
-  --hue-color: 190; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  --hue-color: 223; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
   /*===HSL Colors===*/
 
-  --first-color: hsl(var(--hue-color), 43%, 50%);
+  --first-color: hsl(var(--hue-color), 37%, 27%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -688,8 +688,16 @@ img {
 .submit__button {
   border: none;
   font-weight: var(--font-medium);
+  cursor: pointer;
 }
 
+.flashes {
+  list-style: none;
+  padding: 30px;
+  text-align: center;
+  background-color: var(--first-color-lighter);
+  margin-top: 3rem;
+}
 /*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;

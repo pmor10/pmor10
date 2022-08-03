@@ -1,7 +1,10 @@
 from flask import Flask, flash, render_template, url_for, request, redirect
 import csv
+from secret_key import SECRET_KEY
+
 
 app = Flask(__name__)
+app.secret_key = SECRET_KEY
 
 @app.route('/')
 def index():
@@ -35,8 +38,11 @@ def submit_form():
             data = request.form.to_dict()
             # write_to_file(data)
             write_to_csv(data)
-            return redirect('/thanks.html')
-        except:
+            print(data)
+            flash('Thank You! I will get in touch with you, shortly!')
+            return redirect('/')
+        except Exception as e:
+            print(e)
             return 'Did not save to database'
     else:
         flash('Something went wrong, try again!')

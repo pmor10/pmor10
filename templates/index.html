@@ -63,6 +63,17 @@
     <main class="main">
       <!--==================== HOME ====================-->
       <section class="home section" id="home">
+        <div class="submit__message">
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+        </div>
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__social">
@@ -110,7 +121,7 @@
                   />
                 </g>
               </svg> -->
-              <div class="home__blob"><img src="../static/img/female-programmer.png" alt="female-programmer"></div>
+              <div class="home__blob"><img src="../static/img/programmer-2.gif" alt="female-programmer"></div>
             </div>
             <div class="home__data">
               <h1 class="home__title">Hi! I'm Paresa</h1>
